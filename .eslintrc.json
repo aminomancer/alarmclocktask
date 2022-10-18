@@ -1,0 +1,66 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": ["eslint-config-prettier", "eslint:recommended"],
+  "plugins": ["eslint-plugin-prettier", "import"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "ignorePatterns": ["node_modules"],
+  "rules": {
+    "no-eval": "off",
+    "no-implied-eval": "error",
+    "no-unused-vars": "off",
+    "consistent-return": "off",
+    "no-empty": "off",
+    "complexity": ["warn", { "max": 50 }],
+    "no-console": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "arrowParens": "avoid",
+        "printWidth": 80,
+        "tabWidth": 2,
+        "trailingComma": "es5",
+        "quoteProps": "as-needed",
+        "bracketSameLine": true,
+        "embeddedLanguageFormatting": "auto"
+      }
+    ],
+    "indent": "off",
+    "max-len": "off",
+    "quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "curly": ["error", "multi-line"],
+    "camelcase": [
+      "error",
+      {
+        "properties": "never",
+        "ignoreDestructuring": false,
+        "ignoreGlobals": true
+      }
+    ],
+    "max-classes-per-file": "off",
+    "no-cond-assign": ["error", "except-parens"],
+    "no-fallthrough": [
+      "error",
+      {
+        // The eslint rule doesn't allow for case-insensitive regex option.
+        // The following pattern allows for a dash between "fall through" as
+        // well as alternate spelling of "fall thru". The pattern also allows
+        // for an optional "s" at the end of "fall" ("falls through").
+        "commentPattern": "[Ff][Aa][Ll][Ll][Ss]?[\\s-]?([Tt][Hh][Rr][Oo][Uu][Gg][Hh]|[Tt][Hh][Rr][Uu])"
+      }
+    ]
+  }
+}

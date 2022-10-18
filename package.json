@@ -1,0 +1,59 @@
+{
+  "name": "alarmclocktask",
+  "version": "1.0.0",
+  "description": "A configurable alarm clock that wakes your computer using Windows Task Scheduler",
+  "scripts": {
+    "bootstrap": "node bootstrap.js && npm run settings",
+    "install-shortcuts": "PowerShell -NoProfile -NoLogo -ExecutionPolicy Bypass -File ./bin/install-shortcuts.ps1",
+    "settings": "node settings.js",
+    "set-clock": "node set-clock.js"
+  },
+  "type": "module",
+  "main": "./lib/settings-screen.mjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aminomancer/alarmclocktask.git"
+  },
+  "keywords": [
+    "alarm-clock",
+    "task-scheduler",
+    "cli",
+    "console"
+  ],
+  "author": "aminomancer",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/aminomancer/alarmclocktask/issues"
+  },
+  "homepage": "https://github.com/aminomancer/alarmclocktask#readme",
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "node": ">=14.16"
+  },
+  "private": "true",
+  "dependencies": {
+    "app-root-path": "^3.1.0",
+    "async-wait-until": "^2.0.12",
+    "emoji-unicode": "^2.0.1",
+    "fast-fuzzy": "^1.11.2",
+    "inquirer": "^9.1.3",
+    "inquirer-autocomplete-prompt": "^3.0.0",
+    "inquirer-date-prompt": "^3.0.0",
+    "is-admin": "^4.0.0",
+    "load-json-file": "^7.0.1",
+    "node-powershell": "^5.0.1",
+    "sudo-prompt": "^9.2.1",
+    "which": "^2.0.2",
+    "write-json-file": "^5.0.0",
+    "xregexp": "^5.1.1"
+  },
+  "devDependencies": {
+    "eslint": "8.24.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "prettier": "2.7.1"
+  }
+}

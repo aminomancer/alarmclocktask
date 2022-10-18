@@ -1,0 +1,10 @@
+{
+  "endOfLine": "auto",
+  "arrowParens": "avoid",
+  "printWidth": 80,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "quoteProps": "as-needed",
+  "bracketSameLine": true,
+  "embeddedLanguageFormatting": "auto"
+}
